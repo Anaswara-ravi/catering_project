@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c32">
+    <meta name="description" content="Explore Golden Heyday's Kerala-inspired catering menus, dishes and event packages.">
+    <title>Menu | Golden Heyday Caterers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-detail-page">
+        <header class="menu-detail-nav">
+            <a class="logo" href="index.html#home" aria-label="Golden Heyday Caterers home">
+                <img class="logo-mark" src="images/golden-heyday-mark.svg" alt="">
+                <span class="logo-copy"><b>GOLDEN HEYDAY</b><small>KERALA CATERERS</small></span>
+            </a>
+            <a class="menu-back-link" href="index.html#menu">← &nbsp; ALL MENUS</a>
+        </header>
+
+        <main class="menu-detail-content section-wrap" id="menu-detail-content">
+            <div class="menu-detail-heading">
+                <p class="eyebrow"><span>THE TABLE</span> / MENU</p>
+                <div class="menu-detail-title-row">
+                    <img class="menu-detail-title-mark" src="images/golden-heyday-mark.svg" alt="" aria-hidden="true">
+                    <h1 id="menu-title"></h1>
+                </div>
+                <p id="menu-description"></p>
+            </div>
+            <section class="menu-category-intro" aria-label="Menu package details">
+                <img id="menu-hero-image" src="" alt="">
+                <div class="menu-detail">
+                    <p class="menu-detail-kicker" id="menu-kicker"></p>
+                    <p id="menu-intro"></p>
+                    <p class="menu-package-note" id="menu-package-note"></p>
+                    <a class="button button-gold menu-enquire" id="menu-enquire-link" href="#">Enquire Now <span aria-hidden="true">↗</span></a>
+                </div>
+            </section>
+            <section aria-labelledby="menu-items-heading">
+                <h2 class="menu-detail-items-heading" id="menu-items-heading">A taste of the menu</h2>
+                <div class="menu-food-grid" id="menu-food-grid"></div>
+            </section>
+            <p class="menu-detail-note">Menu items and package details are starting points; availability, final selections and pricing are confirmed when enquiring.</p>
+        </main>
+
+        <section class="menu-detail-content section-wrap" id="menu-not-found" hidden>
+            <div class="menu-detail-heading">
+                <p class="eyebrow"><span>THE TABLE</span> / MENU</p>
+                <h1>Menu not found</h1>
+                <p>Choose one of our menu categories to explore the dishes and package details.</p>
+                <a class="button button-gold" href="index.html#menu">Back to all menus <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+        <footer class="menu-detail-footer">GOLDEN HEYDAY &nbsp;·&nbsp; KERALA CATERERS</footer>
+    </div>
+
+    <script>
+        const menus = {
+            sadya: {
+                title: 'Kerala Sadya',
+                description: 'A traditional banana-leaf feast with familiar Kerala flavours and a thoughtful finish.',
+                image: 'images/service-sadya.jpg',
+                imageAlt: 'Traditional Kerala Sadya served on banana leaves',
+                kicker: 'THE KERALA TABLE',
+                intro: 'A generous banana-leaf meal rooted in Kerala tradition, with familiar flavours and a thoughtful finish.',
+                packageNote: 'Choose your favourites; menu composition, service and pricing are tailored to your occasion and guest count.',
+                dishes: [
+                    ['Kerala rice', 'images/dishes/rice.jpg', 'Kerala rice on a banana leaf', 'Steamed rice served warm'],
+                    ['Sambar', 'images/dishes/sambar.jpg', 'Sambar with vegetables', 'Lentils, vegetables and spices'],
+                    ['Avial', 'images/dishes/avial.jpg', 'Avial with vegetables and coconut', 'Seasonal vegetables with coconut'],
+                    ['Thoran', 'images/dishes/thoran.jpg', 'Kerala-style vegetable thoran', 'Vegetables tempered with coconut'],
+                    ['Pachadi', 'images/dishes/pachadi.jpg', 'Pachadi with coconut and seasoning', 'A gently spiced, creamy side'],
+                    ['Olan', 'images/dishes/olan.jpg', 'Olan, a mild Kerala curry', 'A mild coconut-milk curry'],
+                    ['Pappadam', 'images/dishes/papad.jpg', 'Crisp pappadam', 'A crisp traditional accompaniment'],
+                    ['Payasam', 'images/dishes/payasam.jpg', 'Kerala payasam garnished with nuts', 'A sweet traditional finish'],
+                    ['Pickle', 'images/dishes/pickle.jpg', 'Kerala pickle served with Sadya', 'A bright, tangy accompaniment']
+                ]
+            },
+            biriyani: {
+                title: 'Biriyani',
+                description: 'Slow-cooked favourites with aromatic rice, layered spices and satisfying accompaniments.',
+                image: 'images/menu-biriyani.jpg',
+                imageAlt: 'Biriyani prepared with fragrant rice and spices',
+                kicker: 'SLOW-COOKED & GENEROUS',
+                intro: 'Aromatic rice, layered spices and satisfying accompaniments for family gatherings and celebrations.',
+                packageNote: 'Protein choices, sides and portions can be discussed when planning your event.',
+                dishes: [
+                    ['Biriyani', 'images/menu-biriyani.jpg', 'Biriyani prepared with fragrant rice and spices', 'Aromatic rice and layered spices']
+                ]
+            },
+            wedding: {
+                title: 'Wedding Menu',
+                description: 'A considered menu for your day, shaped around your celebration and guests.',
+                image: 'images/service-wedding.jpg',
+                imageAlt: 'Elegant dishes prepared for a wedding celebration',
+                kicker: 'MADE FOR THE MOMENT',
+                intro: 'From a traditional Kerala feast to a celebratory buffet, shape the food and service around your wedding.',
+                packageNote: 'Plan welcome bites, main courses and dessert around your venue, schedule and guest count.',
+                dishes: [
+                    ['Welcome bites', 'images/dishes/wedding-bites.jpg', 'Elegant welcome bites served in small portions', 'Small plates to greet your guests'],
+                    ['Kerala Sadya', 'images/service-sadya.jpg', 'Traditional Kerala Sadya served for a celebration', 'A generous traditional feast'],
+                    ['Biriyani & mains', 'images/menu-biriyani.jpg', 'Biriyani prepared for a wedding meal', 'Celebration favourites for the table'],
+                    ['Sweet finish', 'images/dishes/celebration-cake.jpg', 'Celebration cake with berries and flowers', 'Cake, payasam or dessert selections']
+                ]
+            },
+            party: {
+                title: 'Party Menu',
+                description: 'Easy-to-share food and celebratory favourites for good company.',
+                image: 'images/service-celebration.jpg',
+                imageAlt: 'Food and dessert spread for a private celebration',
+                kicker: 'FOR YOUR GATHERING',
+                intro: 'A relaxed spread for birthdays, anniversaries and family occasions, planned to suit your guests.',
+                packageNote: 'Choose welcome snacks, shared mains and a sweet finish. Service options are confirmed when enquiring.',
+                dishes: [
+                    ['Party snacks', 'images/menu-snacks.jpg', 'Kerala banana chips for sharing', 'Crunchy bites to share'],
+                    ['Biriyani & mains', 'images/menu-biriyani.jpg', 'Biriyani for a family celebration', 'A hearty centrepiece'],
+                    ['Appam & curry', 'images/menu-breakfast.jpg', 'Appam and curry arranged for guests', 'Comforting South Indian flavours'],
+                    ['Celebration desserts', 'images/dishes/mini-cupcakes.jpg', 'Mini cupcakes topped with berries', 'Sweet treats for the table']
+                ]
+            },
+            snacks: {
+                title: 'Snacks',
+                description: 'Little bites and freshly prepared favourites to welcome your guests.',
+                image: 'images/menu-snacks.jpg',
+                imageAlt: 'Traditional Kerala banana chips served for sharing',
+                kicker: 'A WARM WELCOME',
+                intro: 'Traditional favourites and tea-time bites to welcome guests or add a little something between courses.',
+                packageNote: 'Build a snack spread with savoury bites and refreshments, tailored to your event timing and guest count.',
+                dishes: [
+                    ['Banana chips', 'images/menu-snacks.jpg', 'Crispy banana chips', 'A Kerala tea-time favourite'],
+                    ['Unniyappam', 'images/dishes/unniyappam.jpg', 'Unniyappam, a traditional Kerala sweet snack', 'Soft, sweet traditional bites'],
+                    ['Sarkara Upperi', 'images/dishes/sarkara-upperi.jpg', 'Sarkara upperi, Kerala jaggery-coated banana chips', 'Sweet, crisp banana pieces coated with jaggery'],
+                    ['Savoury bites', 'images/dishes/wedding-bites.jpg', 'Savoury welcome bites served in small cups', 'Small portions for easy sharing'],
+                    ['Dosa & chutneys', 'images/live-dosa.jpg', 'Dosa served with chutneys and curry', 'Freshly prepared, served warm']
+                ]
+            },
+            desserts: {
+                title: 'Desserts',
+                description: 'A sweet ending to the celebration, with Kerala classics and favourites for the table.',
+                image: 'images/service-celebration.jpg',
+                imageAlt: 'Assorted desserts displayed for a celebration',
+                kicker: 'A SWEET FINISH',
+                intro: 'Bring the meal to a close with comforting Kerala sweets or a dessert selection for the whole table.',
+                packageNote: 'Dessert choices and portions depend on your menu, guest count and event requirements.',
+                dishes: [
+                    ['Payasam', 'images/dishes/payasam.jpg', 'Traditional Kerala payasam garnished with nuts', 'A classic Kerala sweet finish'],
+                    ['Celebration cake', 'images/dishes/celebration-cake.jpg', 'Layered celebration cake decorated with berries', 'A centrepiece for your occasion'],
+                    ['Mini cupcakes', 'images/dishes/mini-cupcakes.jpg', 'Mini cupcakes topped with fresh berries', 'Individual sweet portions'],
+                    ['Assorted desserts', 'images/service-celebration.jpg', 'Assorted sweets and desserts on a celebration table', 'A selection to share with guests']
+                ]
+            }
+        };
+
+        const category = new URLSearchParams(window.location.search).get('category');
+        const menu = menus[category];
+        if (!menu) {
+            document.querySelector('#menu-detail-content').hidden = true;
+            document.querySelector('#menu-not-found').hidden = false;
+        } else {
+            document.title = `${menu.title} | Golden Heyday Caterers`;
+            document.querySelector('#menu-title').textContent = menu.title;
+            document.querySelector('#menu-description').textContent = menu.description;
+            document.querySelector('#menu-hero-image').src = menu.image;
+            document.querySelector('#menu-hero-image').alt = menu.imageAlt;
+            document.querySelector('#menu-kicker').textContent = menu.kicker;
+            document.querySelector('#menu-intro').textContent = menu.intro;
+            document.querySelector('#menu-package-note').textContent = menu.packageNote;
+            document.querySelector('#menu-enquire-link').href = `index.html?menu=${encodeURIComponent(category)}#contact`;
+
+            const foodGrid = document.querySelector('#menu-food-grid');
+            menu.dishes.forEach(([name, image, alt, description]) => {
+                const figure = document.createElement('figure');
+                const dishImage = document.createElement('img');
+                dishImage.src = image;
+                dishImage.alt = alt;
+                dishImage.loading = 'lazy';
+                const caption = document.createElement('figcaption');
+                const dishName = document.createElement('strong');
+                dishName.textContent = name;
+                const dishDescription = document.createElement('small');
+                dishDescription.textContent = description;
+                caption.append(dishName, dishDescription);
+                figure.append(dishImage, caption);
+                foodGrid.append(figure);
+            });
+        }
+    </script>
+</body>
+</html>

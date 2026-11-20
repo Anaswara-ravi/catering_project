@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title id="title">Golden Heyday monogram</title>
+  <circle cx="60" cy="60" r="55" fill="#183c32" stroke="#D6B46A" stroke-width="2"/>
+  <circle cx="60" cy="60" r="47" fill="none" stroke="#D6B46A" stroke-width="1" opacity=".45"/>
+  <text x="60" y="78" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" letter-spacing="-5" fill="#F7F0E5">GH</text>
+  <path d="M48 89h24" stroke="#D6B46A" stroke-width="2" stroke-linecap="round"/>
+</svg>
